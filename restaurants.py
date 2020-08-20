@@ -4,7 +4,7 @@ import streamlit as st
 import pandas as pd
 import numpy as np
 
-DATA_URL = (r"\Users\adiimated\Desktop\python_app\zomato.csv")
+DATA_URL = (r"< path >\zomato.csv")
 
 st.title("Restaurants Around the World")
 st.markdown("This application is a Streamlit dashboard that can be used"
