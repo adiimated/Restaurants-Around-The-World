@@ -16,13 +16,13 @@ def load_data(nrows):
 	lowercase = lambda x: str(x).lower()
 	data.rename(lowercase,axis='columns',inplace= True)
 	return data
-
 data = load_data(10000)
 
+# Visualize
 st.header("Where are the best rated restaurants in the world ?")
 best_rated = st.slider("Rating :",0.0,5.0)
 st.map(data.query("aggregate_rating >= @best_rated")[["latitude","longitude"]].dropna(how = "any"))
 
-
+# Display Raw Data
 st.subheader('Raw Data')
 st.write(data)
