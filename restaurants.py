@@ -18,7 +18,7 @@ def load_data(nrows):
 	return data
 data = load_data(10000)
 
-# Restaurant data according to aggregate rating
+# Restaurant data according to aggregate rating and its location
 st.header("Restaurants with rating higher than or equal to : ")
 best_rated = st.slider("Rating :",0.0,5.0)
 st.map(data.query("aggregate_rating >= @best_rated")[["latitude","longitude"]].dropna(how = "any"))
