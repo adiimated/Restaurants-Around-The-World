@@ -20,12 +20,12 @@ def load_data(nrows):
 
 data = load_data(10000)
 
-
+# Column focus --> Rating
 st.header("Restaurants with rating higher than or equal to : ")
 best_rated = st.slider("Rating :",0.0,5.0)
 st.map(data.query("aggregate_rating >= @best_rated")[["latitude","longitude"]].dropna(how = "any"))
 
-
+# Column focus --> Price Range
 st.header(" Restaurants within a price range :")
 st.markdown("The price range are represented by numbers from 1 to 4. "
 	"From 1 being the lowest to 4 being the highest.")
