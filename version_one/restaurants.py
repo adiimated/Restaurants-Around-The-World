@@ -1,4 +1,4 @@
-# streamlit run app.py
+# streamlit run restaurants.py
 
 import streamlit as st
 import pandas as pd
