@@ -32,7 +32,7 @@ st.markdown("The price range are represented by numbers from 1 to 4. "
 price_range = st.selectbox("Range to look at :",range(1,5),1)
 pr = data[data['price range'] == price_range]
 st.subheader('Raw Data')
-st.write(data)
+st.write(pr)
 
 
 st.header(" Histogram  :")
